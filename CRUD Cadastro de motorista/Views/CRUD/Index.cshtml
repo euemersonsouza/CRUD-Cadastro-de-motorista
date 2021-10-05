@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CRUD_Cadastro_de_motorista.Newmotorista>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>CRUD GERENCIAMENTO DE MOTORISTAS</h2>
+
+<p>
+    @Html.ActionLink("Cadastar Motorista", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Motnome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Motsobrenome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Motcaminhao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Motendereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Motmarca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Motmodelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Motnumcaminhao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moteixos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motnome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motsobrenome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motcaminhao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motendereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motmarca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motmodelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motnumcaminhao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moteixos)
+        </td>
+        <td>
+            @Html.ActionLink("Edite", "Edit", new { id=item.Motid }) |
+            @Html.ActionLink("Detalhe", "Details", new { id=item.Motid }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.Motid })
+        </td>
+    </tr>
+}
+
+</table>

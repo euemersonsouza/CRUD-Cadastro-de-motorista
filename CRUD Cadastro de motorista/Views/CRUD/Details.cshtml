@@ -1,0 +1,90 @@
+﻿@model CRUD_Cadastro_de_motorista.Models.Motorista
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Motorista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Motid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motnome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motnome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motsobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motsobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motcaminhao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motcaminhao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motendereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motendereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motmarca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motmarca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motmodelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motmodelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motnumcaminhao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motnumcaminhao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Moteixos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moteixos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Motid }) |
+    @Html.ActionLink("Voltar para Lista", "Index")
+</p>
